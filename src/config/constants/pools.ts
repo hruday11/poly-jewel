@@ -30,6 +30,34 @@ const pools: PoolConfig[] = [
     sortOrder: 999,
     isFinished: false,
   },
+  {
+    sousId: 3,
+    stakingToken: tokens.blzd,
+    earningToken: tokens.btc,
+    contractAddress: {
+      97: '',
+      56: '0xa918f270F3F9bC0032aF233876BA1EE43d4946e5',
+    },
+    poolCategory: PoolCategory.CORE,
+    harvest: true,
+    tokenPerBlock: '0.0000049603',
+    sortOrder: 999,
+    isFinished: false,
+  },
+  {
+    sousId: 4,
+    stakingToken: tokens.blzd,
+    earningToken: tokens.eth,
+    contractAddress: {
+      97: '',
+      56: '0x6F7CAFCD187d9cAbfa5A0139c7cC28c03BF7633b',
+    },
+    poolCategory: PoolCategory.CORE,
+    harvest: true,
+    tokenPerBlock: '0.000248',
+    sortOrder: 999,
+    isFinished: false,
+  },
 ]
 
 export default pools
