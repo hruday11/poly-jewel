@@ -130,12 +130,16 @@ export const useGetApiPrices = () => {
 
 export const useGetApiPrice = (token: string) => {
   const prices = useGetApiPrices()
+  let tokenSymbol = token.toLowerCase()
 
   if (!prices) {
     return null
   }
 
-  return prices[token.toLowerCase() === 'bnb' ? 'wbnb' : token.toLowerCase()]
+  if (tokenSymbol === 'bnb') tokenSymbol = 'wbnb'
+  if (tokenSymbol === 'btc') tokenSymbol = 'btcb'
+
+  return prices[tokenSymbol]
 }
 
 // Block
