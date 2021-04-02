@@ -40,7 +40,7 @@ const Coming: React.FC = () => {
     <Card>
       <div style={{ padding: '24px' }}>
         <CardTitle>{TranslateString(414, 'Your Project?')} </CardTitle>
-        <Image src="/images/monster-question.png" width={64} height={64} alt="Your project here" />
+        <Image src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/monster-question.png" width={64} height={64} alt="Your project here" />
         <Balance>???</Balance>
         <Label>{TranslateString(416, 'Create a pool for your token')}</Label>
         <Button

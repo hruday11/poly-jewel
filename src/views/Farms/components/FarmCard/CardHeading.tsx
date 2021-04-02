@@ -34,7 +34,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({ lpLabel, multiplier, fa
           <MultiplierTag variant="secondary">{multiplier}</MultiplierTag>
         </Flex>
       </Flex>
-      <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
+      <Image src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} />
     </Wrapper>
   )
 }

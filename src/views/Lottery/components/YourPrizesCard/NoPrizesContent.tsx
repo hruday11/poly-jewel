@@ -37,7 +37,7 @@ const NoPrizesContent: React.FC = () => {
 
   return (
     <Wrapper>
-      <Image src="/images/no-prize.svg" alt="no prizes won" />
+      <Image src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/no-prize.svg" alt="no prizes won" />
       <TextWrapper>
         <StyledText color="textDisabled">{TranslateString(999, 'Sorry, no prizes to collect')}</StyledText>
         <StyledButton variant="text" onClick={onPresentMyTickets}>

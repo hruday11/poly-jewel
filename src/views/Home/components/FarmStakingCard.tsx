@@ -10,7 +10,7 @@ import BlzdHarvestBalance from './BlzdHarvestBalance'
 import BlzdWalletBalance from './BlzdWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/blzd/2a.png');
+  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2a.png');
   background-size: 256px;
   background-repeat: no-repeat;
   background-position: top right;
@@ -75,7 +75,7 @@ const FarmedStakingCard = () => {
               address: '0x57067A6BD75c0E95a6A5f158455926e43E79BeB0',
               symbol: 'BLZD',
               decimals: '18',
-              image: 'https://blizzard.money/images/farms/blzd.png',
+              image: 'https://blizzard.moneyhttps://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/blzd.png',
             },
           },
         })
@@ -96,9 +96,9 @@ const FarmedStakingCard = () => {
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <TokenImageWrapper>
-          <CardImage src="/images/blzd/2.png" alt="blzd logo" width={64} height={64} />
+          <CardImage src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2.png" alt="blzd logo" width={64} height={64} />
           <Button onClick={addWatchBlzdToken} scale="sm">
-            + <img style={{ marginLeft: 8 }} width={16} src="/images/wallet/metamask.png" alt="metamask logo" />
+            + <img style={{ marginLeft: 8 }} width={16} src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/wallet/metamask.png" alt="metamask logo" />
           </Button>
         </TokenImageWrapper>
         <Block>

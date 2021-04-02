@@ -9,7 +9,7 @@ const NoNftsToClaimCard = () => {
 
   return (
     <SecondaryCard>
-      <CardContent imgSrc="/images/present-disabled.svg">
+      <CardContent imgSrc="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/present-disabled.svg">
         <Heading mb="8px">{TranslateString(999, 'No NFTs to claim')}</Heading>
         <Text>
           {TranslateString(

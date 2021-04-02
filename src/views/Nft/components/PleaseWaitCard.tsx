@@ -9,7 +9,7 @@ const PleaseWaitCard = () => {
 
   return (
     <SecondaryCard>
-      <CardContent imgSrc="/images/present-alt.svg">
+      <CardContent imgSrc="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/present-alt.svg">
         <Heading mb="8px">{TranslateString(999, 'Please wait...')}</Heading>
         <Text>{TranslateString(999, "The claiming period hasn't started yet. Check back soon.")}</Text>
       </CardContent>

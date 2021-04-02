@@ -9,7 +9,7 @@ const NftInWalletCard = () => {
   return (
     <Card>
       <CardBody>
-        <CardContent imgSrc="/images/present.svg">
+        <CardContent imgSrc="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/present.svg">
           <Heading mb="8px">{TranslateString(999, 'NFT in wallet')}</Heading>
           <Text>{TranslateString(999, 'Trade in your NFT for CAKE, or just keep it for your collection.')}</Text>
         </CardContent>

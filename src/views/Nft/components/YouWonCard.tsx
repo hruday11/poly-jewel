@@ -9,7 +9,7 @@ const YouWonCard = () => {
   return (
     <Card isActive>
       <CardBody>
-        <CardContent imgSrc="/images/present.svg">
+        <CardContent imgSrc="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/present.svg">
           <Heading mb="8px">{TranslateString(999, 'You won!')}</Heading>
           <Text>{TranslateString(999, 'Claim an NFT from the options below!')}</Text>
         </CardContent>

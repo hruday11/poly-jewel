@@ -21,7 +21,7 @@ export interface IfoCardProps {
 }
 
 const StyledIfoCard = styled(Card)<{ ifoId: string }>`
-  background-image: ${({ ifoId }) => `url('/images/ifos/${ifoId}-bg.svg')`};
+  background-image: ${({ ifoId }) => `url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/ifos/${ifoId}-bg.svg')`};
   background-repeat: no-repeat;
   background-size: contain;
   padding-top: 112px;

@@ -11,7 +11,7 @@ import TotalValueLockedCard from './components/TotalValueLockedCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/blzd/3.png');
+  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png');
   background-size: 110px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -24,7 +24,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/blzd/3.png'), url('/images/blzd/3b.png');
+    background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png'), url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3b.png');
     background-size: 150px;
     background-position: left center, right center;
     height: 165px;

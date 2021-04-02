@@ -73,7 +73,7 @@ const ComingSoon = () => {
               <strong>{TranslateString(510, 'You get the tokens.')}</strong>
             </Text>
           </Block>
-          <MobileImage src="/images/ifo-bunny.svg" alt="ifo bunny" />
+          <MobileImage src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/ifo-bunny.svg" alt="ifo bunny" />
           <Block>
             <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
             <Text mb={3}>
@@ -93,7 +93,7 @@ const ComingSoon = () => {
           </Block>
         </div>
         <div>
-          <MainImage src="/images/ifo-bunny.svg" alt="ifo bunny" />
+          <MainImage src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/ifo-bunny.svg" alt="ifo bunny" />
         </div>
       </Content>
     </Page>

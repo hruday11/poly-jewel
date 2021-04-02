@@ -122,7 +122,7 @@ const NftCard: React.FC<NftCardProps> = ({ nft }) => {
 
   return (
     <Card isActive={walletOwnsNft}>
-      <Image src={`/images/nfts/${previewImage}`} alt={name} originalLink={walletOwnsNft ? originalImage : null} />
+      <Image src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/nfts/${previewImage}`} alt={name} originalLink={walletOwnsNft ? originalImage : null} />
       <CardBody>
         <Header>
           <Heading>{name}</Heading>

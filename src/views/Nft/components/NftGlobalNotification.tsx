@@ -26,7 +26,7 @@ const NftYouWonModal: React.FC<NftYouWonModalProps> = ({ onDismiss }) => {
   return (
     <Modal title={TranslateString(999, 'Congratulations!')} onDismiss={onDismiss}>
       <ModalContent>
-        <img src="/images/present.svg" alt="You won present" style={{ height: '64px', marginBottom: '24px' }} />
+        <img src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/present.svg" alt="You won present" style={{ height: '64px', marginBottom: '24px' }} />
         <Heading size="lg" color="secondary">
           {TranslateString(999, 'You won an NFT!')}
         </Heading>

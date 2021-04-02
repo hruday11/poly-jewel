@@ -201,7 +201,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 }
 
 const FarmFinishedSash = styled.div`
-  background-image: url('/images/pool-finished-sash.svg');
+  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/pool-finished-sash.svg');
   background-position: top right;
   background-repeat: not-repeat;
   height: 135px;

@@ -125,7 +125,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <Image src={`/images/pools/${poolImage}`} alt={earningToken.symbol} width={64} height={64} />
+            <Image src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/pools/${poolImage}`} alt={earningToken.symbol} width={64} height={64} />
           </div>
           {account && harvest && !isOldSyrup && (
             <HarvestButton
@@ -223,7 +223,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 }
 
 const PoolFinishedSash = styled.div`
-  background-image: url('/images/pool-finished-sash.svg');
+  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/pool-finished-sash.svg');
   background-position: top right;
   background-repeat: not-repeat;
   height: 135px;

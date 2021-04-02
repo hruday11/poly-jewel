@@ -64,7 +64,7 @@ const config: MenuEntry[] = [
     label: 'Audit',
     icon: 'AuditIcon',
     external: true,
-    href: '/files/gemzAudit.pdf',
+    href: 'https://github.com/blzd-dev/blzd-frontend/blob/master/public/files/gemzAudit.pdf',
   },
 ]
 
