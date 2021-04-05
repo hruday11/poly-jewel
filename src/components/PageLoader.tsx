@@ -32,7 +32,11 @@ const PageLoader: React.FC = () => {
   return (
     <Wrapper>
       <LogoIcon>
-        <img style={{ height: 86 }} src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/logo.png" alt="logo" />
+        <img
+          style={{ height: 86 }}
+          src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/logo.png"
+          alt="logo"
+        />
       </LogoIcon>
     </Wrapper>
   )

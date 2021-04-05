@@ -15,7 +15,10 @@ const NftPreview = () => {
         {orderBy(nfts, 'sortOrder').map((nft) => (
           <div key={nft.name}>
             <Card>
-              <Image src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/nfts/${nft.blurImage}`} alt={nft.name} />
+              <Image
+                src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/nfts/${nft.blurImage}`}
+                alt={nft.name}
+              />
               <CardBody>
                 <Heading>{nft.name}</Heading>
               </CardBody>

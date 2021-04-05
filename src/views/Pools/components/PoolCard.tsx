@@ -125,7 +125,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <Image src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/pools/${poolImage}`} alt={earningToken.symbol} width={64} height={64} />
+            <Image
+              src={`https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/pools/${poolImage}`}
+              alt={earningToken.symbol}
+              width={64}
+              height={64}
+            />
           </div>
           {account && harvest && !isOldSyrup && (
             <HarvestButton

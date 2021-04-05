@@ -40,7 +40,10 @@ const Farm: React.FC = () => {
           </ul>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <img src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzdstakepage.png" alt="BLZD Pool icon" />
+          <img
+            src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzdstakepage.png"
+            alt="BLZD Pool icon"
+          />
         </div>
       </Hero>
       <PoolTabButtons />
