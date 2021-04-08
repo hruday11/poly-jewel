@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import farmsConfig from 'config/constants/farms'
 import fetchFarms from './fetchFarms'
 import {
-  fetchFarmUserEarnings,
+  // fetchFarmUserEarnings,
   fetchFarmUserAllowances,
   fetchFarmUserTokenBalances,
   fetchFarmUserStakedBalances,
@@ -45,7 +45,7 @@ export const fetchFarmUserDataAsync = (account) => async (dispatch) => {
   const userFarmAllowances = await fetchFarmUserAllowances(account)
   const userFarmTokenBalances = await fetchFarmUserTokenBalances(account)
   const userStakedBalances = await fetchFarmUserStakedBalances(account)
-  const userFarmEarnings = await fetchFarmUserEarnings(account)
+  // const userFarmEarnings = await fetchFarmUserEarnings(account)
 
   const arrayOfUserDataObjects = userFarmAllowances.map((farmAllowance, index) => {
     return {
@@ -53,7 +53,7 @@ export const fetchFarmUserDataAsync = (account) => async (dispatch) => {
       allowance: userFarmAllowances[index],
       tokenBalance: userFarmTokenBalances[index],
       stakedBalance: userStakedBalances[index],
-      earnings: userFarmEarnings[index],
+      earnings: '0',
     }
   })
 
