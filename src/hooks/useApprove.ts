@@ -5,7 +5,9 @@ import { ethers } from 'ethers'
 import { useDispatch } from 'react-redux'
 import { updateUserAllowance, fetchFarmUserDataAsync } from 'state/actions'
 import { approve } from 'utils/callHelpers'
+import { getxBlzdAddress } from 'utils/addressHelpers'
 import { useMasterchef, useCake, useSousChef, useLottery } from './useContract'
+
 
 // Approve a Farm
 export const useApprove = (lpContract: Contract) => {
@@ -76,6 +78,26 @@ export const useIfoApprove = (tokenContract: Contract, spenderAddress: string) =
       return false
     }
   }, [account, spenderAddress, tokenContract])
+
+  return onApprove
+}
+
+
+// Approve xBLZD
+export const useXBlzdApprove = () => {
+  const { account } = useWallet()
+  const cakeContract = useCake()
+
+  const onApprove = useCallback(async () => {
+    try {
+      const tx = await cakeContract.methods
+        .approve(getxBlzdAddress(), ethers.constants.MaxUint256)
+        .send({ from: account })
+      return tx
+    } catch {
+      return false
+    }
+  }, [account, cakeContract])
 
   return onApprove
 }

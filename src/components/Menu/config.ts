@@ -7,6 +7,11 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
+    label: 'BLZD to xBLZD',
+    icon: 'TradeIcon',
+    href: '/xBLZD',
+  },
+  {
     label: 'Trade',
     icon: 'TradeIcon',
     items: [
