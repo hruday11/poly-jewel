@@ -10,7 +10,7 @@ const tokens = {
       97: '0x1977ECbdE6832920c3554E238deDFfBC5ed996c9',
     },
     decimals: 18,
-    projectLink: 'https://blizzard.money/',
+    projectLink: 'https://PolyJewel/',
   },
   cake: {
     symbol: 'CAKE',

@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback } from 'react'
+import styled from 'styled-components'
 import { Route, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
@@ -17,6 +18,27 @@ import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
 
+
+const FarmsImage = styled.div`
+    background-image: url('/images/polyjewel/farms.png');
+    background-size: 150px;
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+`
+
+const PoolsImage = styled.div`
+    background-image: url('/images/polyjewel/pools.png');
+    background-size: 150px;
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+`
+
 export interface FarmsProps {
   tokenMode?: boolean
 }
@@ -29,6 +51,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const bnbPrice = usePriceBnbBusd()
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const { tokenMode } = farmsProps
+
+  console.log(tokenMode)
 
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
@@ -46,6 +70,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
+
+      console.log(farmsToDisplay)
       // const cakePriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === CAKE_POOL_PID)?.tokenPriceVsQuote || 0)
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
@@ -87,11 +113,15 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   return (
     <Page>
+      {/* <Hero> */}
       <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
+        {/* <img src='/images/polyjewel/farms.png' alt="farmsimg" /> */}
+        {tokenMode ? <PoolsImage /> : <FarmsImage />}
         {tokenMode
           ? TranslateString(10002, 'Stake tokens to earn BLZD')
           : TranslateString(320, 'Stake LP tokens to earn BLZD')}
       </Heading>
+      {/* </Hero> */}
       <FarmTabButtons />
       <div>
         <Divider />

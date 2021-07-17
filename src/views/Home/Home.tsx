@@ -11,7 +11,7 @@ import TotalValueLockedCard from './components/TotalValueLockedCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png');
+  background-image: url('/images/polyjewel/homePage.png');
   background-size: 110px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -24,8 +24,8 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png'),
-      url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3b.png');
+    background-image: url('/images/polyjewel/homePage.png'),
+      url('/images/polyjewel/homePage.png');
     background-size: 150px;
     background-position: left center, right center;
     height: 165px;
@@ -62,8 +62,8 @@ const Home: React.FC = () => {
   return (
     <Page>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="primary">
-          {TranslateString(576, 'BLIZZARD.MONEY')}
+        <Heading className="titleText" as="h1" size="xl" mb="24px" color="primary">
+          {TranslateString(576, 'PolyJewel')}
         </Heading>
         <Text>{TranslateString(578, 'The best DEFI app on Binance Smart Chain.')}</Text>
       </Hero>

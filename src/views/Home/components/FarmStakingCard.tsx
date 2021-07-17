@@ -76,7 +76,7 @@ const FarmedStakingCard = () => {
               symbol: 'BLZD',
               decimals: '18',
               image:
-                'https://blizzard.moneyhttps://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/blzd.png',
+                'https://PolyJewelhttps://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/blzd.png',
             },
           },
         })

@@ -33,7 +33,7 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Caves',
+    label: 'Pools',
     icon: 'CaveIcon',
     href: '/caves',
   },
