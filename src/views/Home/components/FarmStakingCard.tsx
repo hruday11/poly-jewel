@@ -7,7 +7,7 @@ import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import BlzdHarvestBalance from './BlzdHarvestBalance'
-import BlzdWalletBalance from './BlzdWalletBalance'
+// import BlzdWalletBalance from './BlzdWalletBalance'
 import './FarmStakingCard.css'
 
 const StyledFarmStakingCard = styled(Card)`
@@ -16,9 +16,9 @@ const StyledFarmStakingCard = styled(Card)`
   border-radius: 8px;
 `
 
-const Block = styled.div`
-  margin-bottom: 16px;
-`
+// const Block = styled.div`
+//   margin-bottom: 16px;
+// `
 
 const TokenImageWrapper = styled.div`
   display: flex;
@@ -30,10 +30,10 @@ const CardImage = styled.img`
   margin-right: 8px;
 `
 
-const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
-  font-size: 14px;
-`
+// const Label = styled.div`
+//   color: ${({ theme }) => theme.colors.textSubtle};
+//   font-size: 14px;
+// `
 
 const Actions = styled.div`
   margin-top: 24px;
@@ -59,35 +59,35 @@ const FarmedStakingCard = () => {
     }
   }, [onReward])
 
-  const addWatchBlzdToken = useCallback(async () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const provider = window.ethereum
-    if (provider) {
-      try {
-        // wasAdded is a boolean. Like any RPC method, an error may be thrown.
-        const wasAdded = await provider.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: '0x57067A6BD75c0E95a6A5f158455926e43E79BeB0',
-              symbol: 'BLZD',
-              decimals: '18',
-              image:
-                'https://PolyJewelhttps://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/blzd.png',
-            },
-          },
-        })
+  // const addWatchBlzdToken = useCallback(async () => {
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   const provider = window.ethereum
+  //   if (provider) {
+  //     try {
+  //       // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+  //       const wasAdded = await provider.request({
+  //         method: 'wallet_watchAsset',
+  //         params: {
+  //           type: 'ERC20',
+  //           options: {
+  //             address: '0x57067A6BD75c0E95a6A5f158455926e43E79BeB0',
+  //             symbol: 'BLZD',
+  //             decimals: '18',
+  //             image:
+  //               'https://PolyJewelhttps://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/farms/blzd.png',
+  //           },
+  //         },
+  //       })
 
-        if (wasAdded) {
-          console.log('Token was added')
-        }
-      } catch (error) {
-        // TODO: find a way to handle when the user rejects transaction or it fails
-      }
-    }
-  }, [])
+  //       if (wasAdded) {
+  //         console.log('Token was added')
+  //       }
+  //     } catch (error) {
+  //       // TODO: find a way to handle when the user rejects transaction or it fails
+  //     }
+  //   }
+  // }, [])
 
   return (
     <StyledFarmStakingCard>
