@@ -24,8 +24,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/polyjewel/homePage.png'),
-      url('/images/polyjewel/homePage.png');
+    background-image: url('/images/polyjewel/homePage.png'), url('/images/polyjewel/homePage.png');
     background-size: 150px;
     background-position: left center, right center;
     height: 165px;

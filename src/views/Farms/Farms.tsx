@@ -18,25 +18,24 @@ import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
 
-
 const FarmsImage = styled.div`
-    background-image: url('/images/polyjewel/farms.png');
-    background-size: 150px;
-    width: 200px;
-    height: 60px;
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 20px;
+  background-image: url('/images/polyjewel/farms.png');
+  background-size: 150px;
+  width: 200px;
+  height: 60px;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 20px;
 `
 
 const PoolsImage = styled.div`
-    background-image: url('/images/polyjewel/pools.png');
-    background-size: 150px;
-    width: 200px;
-    height: 60px;
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 20px;
+  background-image: url('/images/polyjewel/pools.png');
+  background-size: 150px;
+  width: 200px;
+  height: 60px;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 20px;
 `
 
 export interface FarmsProps {
@@ -70,7 +69,6 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
-
       console.log(farmsToDisplay)
       // const cakePriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === CAKE_POOL_PID)?.tokenPriceVsQuote || 0)
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
