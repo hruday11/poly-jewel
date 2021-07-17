@@ -8,7 +8,7 @@ import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 import { useFarms, usePriceBlzdBusd } from '../../../state/hooks'
-import './BlzdStats.css';
+import './BlzdStats.css'
 
 const StyledBlzdStats = styled(Card)`
   margin-left: auto;
@@ -52,11 +52,11 @@ const BlzdStats = () => {
         </Row>
         <Row>
           <Text className="font18">{TranslateString(999, 'Market Cap')}</Text>
-          <CardValue  value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
+          <CardValue value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
           <Text className="font18">{TranslateString(538, 'Total BLZD Burned')}</Text>
-          <CardValue  value={getBalanceNumber(burnedBalance)} decimals={0} />
+          <CardValue value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
           <Text className="font18">{TranslateString(540, 'New BLZD/block')}</Text>

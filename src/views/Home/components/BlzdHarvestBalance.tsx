@@ -5,7 +5,7 @@ import BigNumber from 'bignumber.js'
 import useI18n from 'hooks/useI18n'
 import useAllEarnings from 'hooks/useAllEarnings'
 import CardValue from './CardValue'
-import './BlzdHarvestBalance.css';
+import './BlzdHarvestBalance.css'
 
 const BlzdHarvestBalance = () => {
   const TranslateString = useI18n()
@@ -16,11 +16,7 @@ const BlzdHarvestBalance = () => {
   }, 0)
 
   if (!account) {
-    return (
-      <Text className="lockedText">
-        {TranslateString(298, 'Locked')}
-      </Text>
-    )
+    return <Text className="lockedText">{TranslateString(298, 'Locked')}</Text>
   }
 
   return <CardValue value={earningsSum} />

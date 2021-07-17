@@ -8,7 +8,7 @@ import FarmStakingCard from './components/FarmStakingCard'
 import BlzdStats from './components/BlzdStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 // import TwitterCard from './components/TwitterCard'
-import './Home.css';
+import './Home.css'
 
 const Hero = styled.div`
   align-items: center;
@@ -52,7 +52,6 @@ const Cards = styled(BaseLayout)`
     & > div {
       grid-column: span 8;
     }
- 
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -72,16 +71,15 @@ const Home: React.FC = () => {
           {TranslateString(576, 'PolyJewel')}
         </Heading>
         {/* <Text className="titleText" >{TranslateString(578, 'The best DEFI app on Binance Smart Chain.The best DEFI app on Binance Smart Chain.')}</Text> */}
-        <Text className="titleText">Custom color from themeCustom color from themeCustom color from themeCustom color from
-         themeCustom color from themeCustom color from themeCustom color from themeCustom color from themeCustom color from
-          themeCustom color from themeCustom color from theme
-          </Text>
-          <a href="https://t.me/BlizzardMoney" target="_blank" rel="noreferrer" className="sc-fTABeZ gHveVL joinusBtn">JOIN US</a>
-          <img
-          className="showMb"
-          src="/images/polyjewel/homePage.png"
-          alt="logo"
-        />
+        <Text className="titleText">
+          Custom color from themeCustom color from themeCustom color from themeCustom color from themeCustom color from
+          themeCustom color from themeCustom color from themeCustom color from themeCustom color from themeCustom color
+          from themeCustom color from theme
+        </Text>
+        <a href="https://t.me/BlizzardMoney" target="_blank" rel="noreferrer" className="sc-fTABeZ gHveVL joinusBtn">
+          JOIN US
+        </a>
+        <img className="showMb" src="/images/polyjewel/homePage.png" alt="logo" />
       </Hero>
       <div>
         <Cards>

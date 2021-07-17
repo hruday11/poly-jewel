@@ -16,9 +16,9 @@ import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
-import Divider from './components/Divider';
-import './Farms.css';
-import PercentCardImg from '../../assets/images/percentCardImg.svg';
+import Divider from './components/Divider'
+import './Farms.css'
+import PercentCardImg from '../../assets/images/percentCardImg.svg'
 
 const FarmsImage = styled.div`
   background-image: url('/images/polyjewel/farms.png');
@@ -44,21 +44,29 @@ export interface FarmsProps {
   tokenMode?: boolean
 }
 
-const loopData = [{
-  id: 1,
-}, {
-  id: 2,
-}, {
-  id: 3,
-}, {
-  id: 4,
-}, {
-  id: 5,
-}, {
-  id: 6,
-}, {
-  id: 7,
-}]
+const loopData = [
+  {
+    id: 1,
+  },
+  {
+    id: 2,
+  },
+  {
+    id: 3,
+  },
+  {
+    id: 4,
+  },
+  {
+    id: 5,
+  },
+  {
+    id: 6,
+  },
+  {
+    id: 7,
+  },
+]
 
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const { path } = useRouteMatch()
@@ -146,43 +154,46 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           <Route exact path={`${path}`}>
             {/* {farmsList(activeFarms, false)} */}
             {loopData.map((data) => {
-              return <div key={data.id} className="activeCard">
-                <img
-                  className="activeImg"
-                  src="https://raw.githubusercontent.com/blzd-dev/blzd-assets/main/farms/xblzd-busd.png"
-                  alt="logo"
-                />
-                <div className="noFeesBlock">
-                  <Text className="noFeesHeader">xBLZD-BUSD LPv2</Text>
-                  <div>
-                    <button className="unstyledBtn" type="button">Unstyled Button</button>
+              return (
+                <div key={data.id} className="activeCard">
+                  <img
+                    className="activeImg"
+                    src="https://raw.githubusercontent.com/blzd-dev/blzd-assets/main/farms/xblzd-busd.png"
+                    alt="logo"
+                  />
+                  <div className="noFeesBlock">
+                    <Text className="noFeesHeader">xBLZD-BUSD LPv2</Text>
+                    <div>
+                      <button className="unstyledBtn" type="button">
+                        Unstyled Button
+                      </button>
+                    </div>
+                  </div>
+                  <div className="percentCard">
+                    <Text className="percentCardText">229.69%</Text>
+                    <img src={PercentCardImg} alt="PercentCardImg" />
+                  </div>
+                  <div className="depositCard">
+                    <div className="">
+                      <Text className="depositFee font14">Deposit Fee</Text>
+                      <Text className="depositFeepercent font14">0%</Text>
+                    </div>
+                    <div className="">
+                      <Text className="depositFee font14">Deposit Fee</Text>
+                      <Text className="depositFeepercent font14">0%</Text>
+                    </div>
+                  </div>
+                  <div className="liquidityCard">
+                    <Text className="liquidityText">Liquidity</Text>
+                    <Text className="liquidityAmt">$2.08m</Text>
+                  </div>
+                  <div className="earnedCard">
+                    <Text className="earnedText">Earned</Text>
+                    <Text className="earnedAmt">0</Text>
                   </div>
                 </div>
-                <div className="percentCard">
-                  <Text className="percentCardText">229.69%</Text>
-                  <img src={PercentCardImg} alt="PercentCardImg" />
-                </div>
-                <div className="depositCard">
-                  <div className="">
-                    <Text className="depositFee font14">Deposit Fee</Text>
-                    <Text className="depositFeepercent font14">0%</Text>
-                  </div>
-                  <div className="">
-                    <Text className="depositFee font14">Deposit Fee</Text>
-                    <Text className="depositFeepercent font14">0%</Text>
-                  </div>
-                </div>
-                <div className="liquidityCard">
-                  <Text className="liquidityText">Liquidity</Text>
-                  <Text className="liquidityAmt">$2.08m</Text>
-                </div>
-                <div className="earnedCard">
-                  <Text className="earnedText">Earned</Text>
-                  <Text className="earnedAmt">0</Text>
-                </div>
-              </div>
+              )
             })}
-
           </Route>
           <Route exact path={`${path}/history`}>
             {farmsList(inactiveFarms, true)}

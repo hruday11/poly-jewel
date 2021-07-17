@@ -8,11 +8,11 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import BlzdHarvestBalance from './BlzdHarvestBalance'
 import BlzdWalletBalance from './BlzdWalletBalance'
-import './FarmStakingCard.css';
+import './FarmStakingCard.css'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 376px;
-  background-color:#211938;
+  background-color: #211938;
   border-radius: 8px;
 `
 
@@ -93,65 +93,62 @@ const FarmedStakingCard = () => {
     <StyledFarmStakingCard>
       <CardBody className="cardBodyMb">
         <div className="borderBtm">
-        <Heading className="cardHeading" as="h6" size="md" mb="24px">
-          {TranslateString(542, 'Farms & Staking')}
-        </Heading>
-        <TokenImageWrapper className="tokenImageWrapperMb">
-          <div className="alignInline">
-            <CardImage
-              className="cardIcon"
-              src="/images/farms/PolyJewel-Icon.png"
-              alt="icon"
-              width={64}
-              height={64}
-            />
-            <BlzdHarvestBalance />
-          </div>
-          <div >
-            <CardImage
-              className="cardIcon"
-              src="/images/farms/PolyJewel-Icon.png"
-              alt="icon"
-              width={64}
-              height={64}
-            />
-            <BlzdHarvestBalance />
-
-          </div>
-        </TokenImageWrapper>
-
+          <Heading className="cardHeading" as="h6" size="md" mb="24px">
+            {TranslateString(542, 'Farms & Staking')}
+          </Heading>
+          <TokenImageWrapper className="tokenImageWrapperMb">
+            <div className="alignInline">
+              <CardImage
+                className="cardIcon"
+                src="/images/farms/PolyJewel-Icon.png"
+                alt="icon"
+                width={64}
+                height={64}
+              />
+              <BlzdHarvestBalance />
+            </div>
+            <div>
+              <CardImage
+                className="cardIcon"
+                src="/images/farms/PolyJewel-Icon.png"
+                alt="icon"
+                width={64}
+                height={64}
+              />
+              <BlzdHarvestBalance />
+            </div>
+          </TokenImageWrapper>
         </div>
         <div>
-        <Heading className="cardHeading" as="h6" size="md" mb="24px">
-          {TranslateString(542, 'Farms & Staking')}
-        </Heading>
-        <TokenImageWrapper className="tokenImageWrapperMb">
-          <div className="alignInline">
-            <CardImage
-              className="cardIcon"
-              src="/images/farms/PolyJewel-Icon.png"
-              alt="icon"
-              width={64}
-              height={64}
-            />
-            <BlzdHarvestBalance />
-          </div>
-          <div>
-            <CardImage
-              className="cardIcon"
-              src="/images/farms/PolyJewel-Icon.png"
-              alt="icon"
-              width={64}
-              height={64}
-            />
-            <BlzdHarvestBalance />
-
-          </div>
-        </TokenImageWrapper>
+          <Heading className="cardHeading" as="h6" size="md" mb="24px">
+            {TranslateString(542, 'Farms & Staking')}
+          </Heading>
+          <TokenImageWrapper className="tokenImageWrapperMb">
+            <div className="alignInline">
+              <CardImage
+                className="cardIcon"
+                src="/images/farms/PolyJewel-Icon.png"
+                alt="icon"
+                width={64}
+                height={64}
+              />
+              <BlzdHarvestBalance />
+            </div>
+            <div>
+              <CardImage
+                className="cardIcon"
+                src="/images/farms/PolyJewel-Icon.png"
+                alt="icon"
+                width={64}
+                height={64}
+              />
+              <BlzdHarvestBalance />
+            </div>
+          </TokenImageWrapper>
         </div>
         <Actions>
           {account ? (
-            <Button  id="harvest-all" disabled={balancesWithValue.length <= 0 || pendingTx} onClick={harvestAllFarms}>
+            <Button id="harvest-all" disabled={balancesWithValue.length <= 0 || pendingTx} onClick={harvestAllFarms}>
               {pendingTx
                 ? TranslateString(548, 'Collecting BLZD')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}

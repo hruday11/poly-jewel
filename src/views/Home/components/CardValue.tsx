@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
 import { Text } from '@blzd-dev/uikit'
-import './CardValue.css';
+import './CardValue.css'
 
 interface CardValueProps {
   value: number
