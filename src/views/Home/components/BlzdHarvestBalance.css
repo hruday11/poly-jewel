@@ -1,0 +1,12 @@
+.lockedText{
+    line-height: 2.5;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+.borderBtm{
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 20px;
+}

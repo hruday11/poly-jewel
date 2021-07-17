@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Heading } from '@blzd-dev/uikit'
+import { Heading, Text } from '@blzd-dev/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -16,7 +16,9 @@ import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
-import Divider from './components/Divider'
+import Divider from './components/Divider';
+import './Farms.css';
+import PercentCardImg from '../../assets/images/percentCardImg.svg';
 
 const FarmsImage = styled.div`
   background-image: url('/images/polyjewel/farms.png');
@@ -123,9 +125,45 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
       <FarmTabButtons />
       <div>
         <Divider />
+        {/* <Heading>sjdf</Heading> */}
         <FlexLayout>
           <Route exact path={`${path}`}>
-            {farmsList(activeFarms, false)}
+            {/* {farmsList(activeFarms, false)} */}
+            <div className="activeCard">
+              <img
+                className="activeImg"
+                src="https://raw.githubusercontent.com/blzd-dev/blzd-assets/main/farms/xblzd-busd.png"
+                alt="logo"
+              />
+              <div className="noFeesBlock">
+                <Text className="noFeesHeader">xBLZD-BUSD LPv2</Text>
+                <div>
+                  <button className="unstyledBtn" type="button">Unstyled Button</button>
+                </div>
+              </div>
+              <div className="percentCard">
+                <Text className="percentCardText">229.69%</Text>
+                <img src={PercentCardImg} alt="PercentCardImg" />
+              </div>
+              <div className="depositCard">
+                <div className="">
+                  <Text className="depositFee font14">Deposit Fee</Text>
+                  <Text className="depositFeepercent font14">0%</Text>
+                </div>
+                <div className="">
+                  <Text className="depositFee font14">Deposit Fee</Text>
+                  <Text className="depositFeepercent font14">0%</Text>
+                </div>
+              </div>
+              <div className="liquidityCard">
+                <Text className="liquidityText">Liquidity</Text>
+                <Text className="liquidityAmt">$2.08m</Text>
+              </div>
+              <div className="earnedCard">
+                <Text className="earnedText">Earned</Text>
+                <Text className="earnedAmt">0</Text>
+              </div>
+            </div>
           </Route>
           <Route exact path={`${path}/history`}>
             {farmsList(inactiveFarms, true)}

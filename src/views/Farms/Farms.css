@@ -1,0 +1,96 @@
+.activeCard{
+    padding: 18px;
+    background: #211938;
+    border-radius: 8px;
+    max-width: 100%;
+}
+.activeCard img{
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.noFeesBlock{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 90px;
+}
+.noFeesHeader{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.unstyledBtn{
+    border: 1px solid rgb(37, 255, 148);
+    height: 20px;
+    font-size: 12px;
+    color: rgb(37, 255, 148);
+    background: transparent;
+    border-radius: 26px;
+    padding: 0 12px;
+}
+.percentCard{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 44px;
+}
+.percentCardText{
+    color: #ffffff;
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.percentCard img{
+    width: 19px;
+    height: 19px;
+}
+    .depositFee {
+        color: #ffffff;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.depositCard{
+    display: inline-block;
+    vertical-align: middle;
+    width: 210px;
+    margin-right: 72px;
+}
+.depositFeepercent{
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    color: #ffffff;
+}
+.font14{
+    font-size: 14px;
+}
+.liquidityText{
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+}
+.liquidityCard{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 70px;
+}
+.liquidityAmt{
+    font-size: 18px;
+    color: #ffffff;
+}
+.earnedAmt{
+    color: #ffffff;
+}
+.earnedText{
+    color: #ffffff;
+}
+.earnedCard{
+    display: inline-block;
+    vertical-align: middle;
+}

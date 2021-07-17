@@ -1,0 +1,15 @@
+.statsText{
+    color: #ffffff;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    font-weight: 700;
+}
+.font18{
+    font-size: 18px;
+    color: #ffffff;
+}
+@media only screen and (max-width: 768px)  {
+    .font18{
+        font-size: 16px;
+    }
+}

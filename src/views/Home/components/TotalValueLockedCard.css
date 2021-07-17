@@ -1,0 +1,28 @@
+.alignBlock{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.alignBlock:last-child{
+    float: right;
+}
+.fullWidth{
+    width: 100%;
+}
+.totalVal{
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 24px;
+    font-weight: bolder;
+}
+.textSubtle{
+    color: #ffffff;
+}
+@media only screen and (max-width: 768px)  {
+    .totalVal{
+        font-size: 26px;
+    }
+    .alignBlock:last-child{
+        float: none;
+    }
+}

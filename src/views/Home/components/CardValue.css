@@ -1,0 +1,9 @@
+.font36{
+    font-size: 36px; 
+    color: #6b1658;
+}
+@media only screen and (max-width: 768px)  {
+    .font36{
+        font-size: 26px; 
+    }
+}

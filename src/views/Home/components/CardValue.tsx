@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
 import { Text } from '@blzd-dev/uikit'
+import './CardValue.css';
 
 interface CardValueProps {
   value: number
@@ -9,7 +10,7 @@ interface CardValueProps {
   prefix?: string
 }
 
-const CardValue: React.FC<CardValueProps> = ({ value, decimals, fontSize = '40px', prefix }) => {
+const CardValue: React.FC<CardValueProps> = ({ value, decimals, prefix }) => {
   const { countUp, update } = useCountUp({
     start: 0,
     end: value,
@@ -27,7 +28,7 @@ const CardValue: React.FC<CardValueProps> = ({ value, decimals, fontSize = '40px
   }, [value, updateValue])
 
   return (
-    <Text bold fontSize={fontSize}>
+    <Text className="font36" bold>
       {prefix}
       {countUp}
     </Text>

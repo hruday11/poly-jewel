@@ -5,11 +5,15 @@ import useI18n from 'hooks/useI18n'
 // import { useGetStats } from 'hooks/api'
 import { useTotalValue } from '../../../state/hooks'
 import CardValue from './CardValue'
+import './TotalValueLockedCard.css';
 
 const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
+  background-color:#211938;
+  border-radius: 8px;
+  padding:14px;
 `
 
 const TotalValueLockedCard = () => {
@@ -20,14 +24,17 @@ const TotalValueLockedCard = () => {
 
   return (
     <StyledTotalValueLockedCard>
-      <CardBody>
-        <Heading size="lg" mb="24px">
+      <CardBody className="fullWidth">
+        <div className="alignBlock">
+        <Heading className="totalVal" size="lg">
           {TranslateString(999, 'Total Value Locked (TVL)')}
         </Heading>
-        <>
+        <Text className="textSubtle">{TranslateString(999, 'Across all Farms and Pools')}</Text>
+        </div>
+      
+        <div className="alignBlock">
           <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} />
-          <Text color="textSubtle">{TranslateString(999, 'Across all Farms and Pools')}</Text>
-        </>
+        </div>
       </CardBody>
     </StyledTotalValueLockedCard>
   )

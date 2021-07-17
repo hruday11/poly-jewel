@@ -8,13 +8,12 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import BlzdHarvestBalance from './BlzdHarvestBalance'
 import BlzdWalletBalance from './BlzdWalletBalance'
+import './FarmStakingCard.css';
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2a.png');
-  background-size: 256px;
-  background-repeat: no-repeat;
-  background-position: top right;
   min-height: 376px;
+  background-color:#211938;
+  border-radius: 8px;
 `
 
 const Block = styled.div`
@@ -92,44 +91,73 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody>
-        <Heading size="xl" mb="24px">
+      <CardBody className="cardBodyMb">
+        <div className="borderBtm">
+        <Heading className="cardHeading" as="h6" size="md" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <TokenImageWrapper>
-          <CardImage
-            src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2.png"
-            alt="blzd logo"
-            width={64}
-            height={64}
-          />
-          <Button onClick={addWatchBlzdToken} scale="sm">
-            +{' '}
-            <img
-              style={{ marginLeft: 8 }}
-              width={16}
-              src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/wallet/metamask.png"
-              alt="metamask logo"
+        <TokenImageWrapper className="tokenImageWrapperMb">
+          <div className="alignInline">
+            <CardImage
+              className="cardIcon"
+              src="/images/farms/PolyJewel-Icon.png"
+              alt="icon"
+              width={64}
+              height={64}
             />
-          </Button>
+            <BlzdHarvestBalance />
+          </div>
+          <div >
+            <CardImage
+              className="cardIcon"
+              src="/images/farms/PolyJewel-Icon.png"
+              alt="icon"
+              width={64}
+              height={64}
+            />
+            <BlzdHarvestBalance />
+
+          </div>
         </TokenImageWrapper>
-        <Block>
-          <BlzdHarvestBalance />
-          <Label>{TranslateString(544, 'BLZD to Harvest')}</Label>
-        </Block>
-        <Block>
-          <BlzdWalletBalance />
-          <Label>{TranslateString(546, 'BLZD in Wallet')}</Label>
-        </Block>
+
+        </div>
+        <div>
+        <Heading className="cardHeading" as="h6" size="md" mb="24px">
+          {TranslateString(542, 'Farms & Staking')}
+        </Heading>
+        <TokenImageWrapper className="tokenImageWrapperMb">
+          <div className="alignInline">
+            <CardImage
+              className="cardIcon"
+              src="/images/farms/PolyJewel-Icon.png"
+              alt="icon"
+              width={64}
+              height={64}
+            />
+            <BlzdHarvestBalance />
+          </div>
+          <div>
+            <CardImage
+              className="cardIcon"
+              src="/images/farms/PolyJewel-Icon.png"
+              alt="icon"
+              width={64}
+              height={64}
+            />
+            <BlzdHarvestBalance />
+
+          </div>
+        </TokenImageWrapper>
+        </div>
         <Actions>
           {account ? (
-            <Button id="harvest-all" disabled={balancesWithValue.length <= 0 || pendingTx} onClick={harvestAllFarms}>
+            <Button  id="harvest-all" disabled={balancesWithValue.length <= 0 || pendingTx} onClick={harvestAllFarms}>
               {pendingTx
                 ? TranslateString(548, 'Collecting BLZD')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (
-            <UnlockButton fullWidth />
+            <UnlockButton className="unlockBtn" fullWidth />
           )}
         </Actions>
       </CardBody>
