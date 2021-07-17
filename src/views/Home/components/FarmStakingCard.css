@@ -1,0 +1,48 @@
+.cardHeading{
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+.cardIcon{
+    width: 42px;
+    height: 42px;
+    margin-right: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.alignInline{
+  margin-right: 90px;
+}
+.unlockBtn{
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 6px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: rgb(107 22 88);
+    color: white;
+}
+@media only screen and (max-width: 768px)  {
+    .cardBodyMb{
+        padding: 34px;
+    }
+    .tokenImageWrapperMb{
+        display: block;
+    }
+}

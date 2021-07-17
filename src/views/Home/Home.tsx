@@ -8,6 +8,7 @@ import FarmStakingCard from './components/FarmStakingCard'
 import BlzdStats from './components/BlzdStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 // import TwitterCard from './components/TwitterCard'
+import './Home.css';
 
 const Hero = styled.div`
   align-items: center;
@@ -24,11 +25,16 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/polyjewel/homePage.png'), url('/images/polyjewel/homePage.png');
-    background-size: 150px;
-    background-position: left center, right center;
-    height: 165px;
+    background: no-repeat;
+    background-image: url(/images/polyjewel/homePage.png);
+    background-size: 325px;
+    background-position: right center;
+    height: 330px;
     padding-top: 0;
+    background-color: #6b1658;
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
   }
 `
 
@@ -46,6 +52,7 @@ const Cards = styled(BaseLayout)`
     & > div {
       grid-column: span 8;
     }
+ 
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -60,11 +67,21 @@ const Home: React.FC = () => {
 
   return (
     <Page>
-      <Hero>
+      <Hero className="HeroCard">
         <Heading className="titleText" as="h1" size="xl" mb="24px" color="primary">
           {TranslateString(576, 'PolyJewel')}
         </Heading>
-        <Text>{TranslateString(578, 'The best DEFI app on Binance Smart Chain.')}</Text>
+        {/* <Text className="titleText" >{TranslateString(578, 'The best DEFI app on Binance Smart Chain.The best DEFI app on Binance Smart Chain.')}</Text> */}
+        <Text className="titleText">Custom color from themeCustom color from themeCustom color from themeCustom color from
+         themeCustom color from themeCustom color from themeCustom color from themeCustom color from themeCustom color from
+          themeCustom color from themeCustom color from theme
+          </Text>
+          <a href="https://t.me/BlizzardMoney" target="_blank" rel="noreferrer" className="sc-fTABeZ gHveVL joinusBtn">JOIN US</a>
+          <img
+          className="showMb"
+          src="/images/polyjewel/homePage.png"
+          alt="logo"
+        />
       </Hero>
       <div>
         <Cards>

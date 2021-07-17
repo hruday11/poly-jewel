@@ -8,10 +8,13 @@ import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 import { useFarms, usePriceBlzdBusd } from '../../../state/hooks'
+import './BlzdStats.css';
 
 const StyledBlzdStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
+  background: #211938;
+  border-radius: 8px;
 `
 
 const Row = styled.div`
@@ -40,24 +43,24 @@ const BlzdStats = () => {
   return (
     <StyledBlzdStats>
       <CardBody>
-        <Heading size="xl" mb="24px">
+        <Heading className="statsText" size="md" mb="24px">
           {TranslateString(534, 'BLZD Stats')}
         </Heading>
         <Row>
-          <Text fontSize="14px">{TranslateString(536, 'Total BLZD Supply')}</Text>
-          {blzdSupply && <CardValue fontSize="14px" value={blzdSupply} decimals={0} />}
+          <Text className="font18">{TranslateString(536, 'Total BLZD Supply')}</Text>
+          {blzdSupply && <CardValue value={blzdSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(999, 'Market Cap')}</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
+          <Text className="font18">{TranslateString(999, 'Market Cap')}</Text>
+          <CardValue  value={getBalanceNumber(marketCap)} decimals={0} prefix="$" />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(538, 'Total BLZD Burned')}</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
+          <Text className="font18">{TranslateString(538, 'Total BLZD Burned')}</Text>
+          <CardValue  value={getBalanceNumber(burnedBalance)} decimals={0} />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(540, 'New BLZD/block')}</Text>
-          <Text bold fontSize="14px">
+          <Text className="font18">{TranslateString(540, 'New BLZD/block')}</Text>
+          <Text bold className="font36">
             {blzdPerBlock}
           </Text>
         </Row>

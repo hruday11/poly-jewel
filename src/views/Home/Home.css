@@ -1,0 +1,51 @@
+.titleText{
+    margin-left: 50px;
+    color: #ffffff;
+    text-align: left;
+    width: 610px;
+}
+.joinusBtn{
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 176px;
+    height: 46px;
+    border-radius: 4px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    color: rgb(107 22 88);
+    font-weight: bold;
+    margin-left: 50px;
+}
+.showMb{
+    display: none;
+}
+@media only screen and (max-width: 768px)  {
+    .HeroCard{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 32px auto;
+        padding: 32px;
+        background:#6b1658;
+        border-radius: 8px;
+        align-items: baseline;
+        margin-top: 0;
+    }
+    .titleText{
+    margin-left: 0;
+    width: auto;
+    }
+    .joinusBtn{
+        margin-left: 0;
+    }
+    .showMb{
+        display: block;
+        width: 50%;
+        height: auto;
+        margin-left: 171px;
+    }
+}
