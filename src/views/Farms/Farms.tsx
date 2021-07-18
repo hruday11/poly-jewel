@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Heading, Text } from '@blzd-dev/uikit'
+import { Heading, Text, Button } from '@blzd-dev/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -19,6 +19,10 @@ import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider';
 import './Farms.css';
 import PercentCardImg from '../../assets/images/percentCardImg.svg';
+import LeftArrow from '../../assets/images/leftArrow.svg';
+import ViewImg from '../../assets/images/viewImg.svg';
+
+
 
 const FarmsImage = styled.div`
   background-image: url('/images/polyjewel/farms.png');
@@ -29,7 +33,20 @@ const FarmsImage = styled.div`
   margin: 0px auto;
   margin-bottom: 20px;
 `
-
+const Hero = styled.div`
+  align-items: center;
+  background-image: url('/images/polyjewel/homePage.png');
+  background-size: 110px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  padding-top: 116px;
+  text-align: center;
+`
 const PoolsImage = styled.div`
   background-image: url('/images/polyjewel/pools.png');
   background-size: 150px;
@@ -114,14 +131,15 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <Page>
       {/* <Hero> */}
-      <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
-        {/* <img src='/images/polyjewel/farms.png' alt="farmsimg" /> */}
+      {/* <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
+        <img src='/images/polyjewel/farms.png' alt="farmsimg" />
         {tokenMode ? <PoolsImage /> : <FarmsImage />}
         {tokenMode
           ? TranslateString(10002, 'Stake tokens to earn BLZD')
           : TranslateString(320, 'Stake LP tokens to earn BLZD')}
-      </Heading>
+      </Heading> */}
       {/* </Hero> */}
+     
       <FarmTabButtons />
       <div>
         <Divider />
@@ -130,38 +148,59 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           <Route exact path={`${path}`}>
             {/* {farmsList(activeFarms, false)} */}
             <div className="activeCard">
-              <img
-                className="activeImg"
-                src="https://raw.githubusercontent.com/blzd-dev/blzd-assets/main/farms/xblzd-busd.png"
-                alt="logo"
-              />
-              <div className="noFeesBlock">
-                <Text className="noFeesHeader">xBLZD-BUSD LPv2</Text>
-                <div>
-                  <button className="unstyledBtn" type="button">Unstyled Button</button>
+              <div>
+                <img
+                  className="activeImg"
+                  src="https://raw.githubusercontent.com/blzd-dev/blzd-assets/main/farms/xblzd-busd.png"
+                  alt="logo"
+                />
+                <div className="noFeesBlock">
+                  <Text className="noFeesHeader">xBLZD-BUSD LPv2</Text>
+                  <div>
+                    <button className="unstyledBtn" type="button">Unstyled Button</button>
+                  </div>
+                </div>
+                <div className="percentCard">
+                  <Text className="percentCardText">229.69%</Text>
+                  <img src={PercentCardImg} alt="PercentCardImg" />
+                </div>
+                <div className="depositCard">
+                  <div className="">
+                    <Text className="depositFee font14">Deposit Fee</Text>
+                    <Text className="depositFeepercent font14">0%</Text>
+                  </div>
+                  <div className="">
+                    <Text className="depositFee font14">Deposit Fee</Text>
+                    <Text className="depositFeepercent font14">0%</Text>
+                  </div>
+                </div>
+                <div className="liquidityCard">
+                  <Text className="liquidityText">Liquidity</Text>
+                  <Text className="liquidityAmt">$2.08m</Text>
+                </div>
+                <div className="earnedCard">
+                  <Text className="earnedText">Earned</Text>
+                  <Text className="earnedAmt">0</Text>
+                </div>
+                <div className="leftArrowBlock">
+                  <img src={LeftArrow} alt="LeftArrow" />
                 </div>
               </div>
-              <div className="percentCard">
-                <Text className="percentCardText">229.69%</Text>
-                <img src={PercentCardImg} alt="PercentCardImg" />
-              </div>
-              <div className="depositCard">
-                <div className="">
-                  <Text className="depositFee font14">Deposit Fee</Text>
-                  <Text className="depositFeepercent font14">0%</Text>
+              <div className="showOnclick">
+                <Button className="unlockBtn">
+                  {TranslateString(292, 'Unlock Wallet')}
+                </Button>
+                <div className="btmBlock">
+                <div className="getView">
+                    <a href="https://t.me/BlizzardMoney" target="_blank" rel="noreferrer" className="sc-fTABeZ gHveVL">Get xBLZD-BUSD LPv2</a>
+                    <img src={ViewImg} alt="ViewImg" />
                 </div>
-                <div className="">
-                  <Text className="depositFee font14">Deposit Fee</Text>
-                  <Text className="depositFeepercent font14">0%</Text>
+                <div className="viewScan">
+                <a href="https://t.me/BlizzardMoney" target="_blank" rel="noreferrer" className="sc-fTABeZ gHveVL">View on BscScan</a>
+
                 </div>
-              </div>
-              <div className="liquidityCard">
-                <Text className="liquidityText">Liquidity</Text>
-                <Text className="liquidityAmt">$2.08m</Text>
-              </div>
-              <div className="earnedCard">
-                <Text className="earnedText">Earned</Text>
-                <Text className="earnedAmt">0</Text>
+                </div>
+            
               </div>
             </div>
           </Route>

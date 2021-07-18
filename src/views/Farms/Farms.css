@@ -78,7 +78,7 @@
 .liquidityCard{
     display: inline-block;
     vertical-align: middle;
-    margin-right: 70px;
+    margin-right: 58px;
 }
 .liquidityAmt{
     font-size: 18px;
@@ -93,4 +93,77 @@
 .earnedCard{
     display: inline-block;
     vertical-align: middle;
+    margin-right: 30px;
+}
+.leftArrowBlock{
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+}
+.unlockBtn{
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 6px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: rgb(107 22 88);
+    color: white;
+}
+.showOnclick{
+    text-align: center;
+    margin-top: 18px;
+}
+.getView{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    border-right: 1px solid #6b1658;
+}
+.viewScan{
+    display: inline-block;
+    vertical-align: middle;
+    color: #6b1658;
+}
+.getView a{
+    color: #6b1658;
+    text-decoration: none;
+    font-weight: normal;
+    margin-right: 12px;
+}
+.getView img{
+    fill:"rgb(107, 22, 88) !important";
+    width: 19px;
+    height: 19px;
+}
+.btmBlock{
+    text-align: right;
+    margin-top: 24px;
+}
+@media only screen and (max-width: 768px)  {
+    .HeroCard{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 32px auto;
+        padding: 32px;
+        background:#6b1658;
+        border-radius: 8px;
+        align-items: baseline;
+        margin-top: 0;
+    }
 }
