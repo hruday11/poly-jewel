@@ -170,10 +170,12 @@
     display: flex;
 }
 .projectLeftBlock{
-    width: 50%;
+    width: 48%;
+    margin-right: 2%;
 }
 .projectRightBlock{
-    width: 50%;
+    width: 48%;
+    margin-left: 2%;
 }
 .btnBllock{
     margin-bottom: 50px;
@@ -184,4 +186,85 @@
     font-size: 16px;
     font-weight: normal;
     line-height: 28px;
+}
+.infoText{
+    width: 50%;
+    margin: 0;
+    text-align: center;
+    color: #e5af47;
+    font-weight: 500;
+    padding: 12px 16px;
+    background-color: #0f1429;
+}
+.infoTabHeader{
+    display: flex;
+}
+.tabDesc{
+    width: 100%;
+}
+.leftDesc{
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
+    padding: 24px;
+    background: #1c274f;
+    border-top: 1px solid #364371;
+    font-size: 14px;
+}
+.rightDesc{
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    color: #ffffff;
+    padding: 24px;
+    background: #1c274f;
+    border-top: 1px solid #364371;
+    font-size: 14px;
+}
+.commPotion{
+    padding: 6px 14px;
+    border-radius: 16px;
+    background: #364371;
+}
+@media only screen and (max-width: 768px)  {
+    .jewelPresale{
+        display: block;
+    }
+    .trasureBlock{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .portionReady{
+        width: 100%;
+    }
+    .btmSpace{
+        padding-bottom: 62px;
+    }
+    .treasureText{
+        font-size: 22px;
+    }
+    .projectExplorer{
+        display: block;
+    }
+    .projectLeftBlock{
+        width: 100%;
+        margin-right: 0;
+    }
+    .projectRightBlock{
+        width: 100%;
+        margin-left: 0;
+    }
+    .rightDesc{
+        font-size: 12px;
+        height: 70px;
+    }
+    .leftDesc{
+        font-size: 12px;
+        height: 70px;
+    }
+    .commPotion{
+        padding: 5px 7px;
+    }
 }
